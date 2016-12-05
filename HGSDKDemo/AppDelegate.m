@@ -16,8 +16,8 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     [[HGSDKParameters sharedHGSDKParameters] setGameId:@"2"];
     [[HGSDKParameters sharedHGSDKParameters] setSecretKey:@"123456"];
     [[HGSDKParameters sharedHGSDKParameters] setCpId:@"4"];

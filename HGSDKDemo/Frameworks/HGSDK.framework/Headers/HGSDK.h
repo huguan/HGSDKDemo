@@ -72,12 +72,8 @@ typedef void (^logoutBlock)();
  *  支付
  *
  *  @param orderInfo    订单信息
- *  @param successBlock 成功回调
- *  @param hgLoginOut   失败回调 错误码和错误信息
  */
-- (void)payment:(HGOrderModel *)orderInfo
-        success:(void (^)())successBlock
-        failure:(void (^)(HGSDKErrorFailed errcode, NSString *errorMessage))errorBlock;
+- (void)payment:(HGOrderModel *)orderInfo;
 
 
 

@@ -68,11 +68,7 @@
     [orderModel setOrderId:[self getOrderStringByTime]];
     [orderModel setCustomInfo:@"断剑重铸之日 骑士归来之时"];
     [orderModel setProductId:@"com.huguan.HGFrameworksSDKDemo.Riven"];
-    [[HGSDK sharedHGSDK] payment:orderModel success:^{
-
-    } failure:^(HGSDKErrorFailed errcode, NSString *errorMessage) {
-        NSLog(@"%@", errorMessage);
-    }];
+    [[HGSDK sharedHGSDK] payment:orderModel];
 }
 ```
 
