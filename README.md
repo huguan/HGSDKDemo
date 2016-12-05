@@ -1,19 +1,7 @@
 # HGSDKDemo
 ==============
-
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/seven/HGSDKDemo/master/LICENSE)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS8-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
-
-
-
-<br/>
----
-中文介绍
-==============
-
-HGSDK 
-
-
 
 
 演示项目
