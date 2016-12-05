@@ -22,9 +22,6 @@ FOUNDATION_EXPORT const unsigned char HGSDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <HGSDK/PublicHeader.h>
 
 
-typedef enum {
-    HGUserNotLogin                     = 10
-}HGSDKErrorFailed;
 
 @class HGSDKParameters;
 @class HGUserModel;
@@ -82,10 +79,6 @@ typedef void (^logoutBlock)();
         success:(void (^)())successBlock
         failure:(void (^)(HGSDKErrorFailed errcode, NSString *errorMessage))errorBlock;
 
-/**
- *  注销用户登陆接口
- */
-- (void)hgLoginOut;
 
 
 /**

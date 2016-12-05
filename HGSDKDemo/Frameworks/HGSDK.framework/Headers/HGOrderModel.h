@@ -8,15 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, HGPayWay) {
-    HGPayWayByIAP   = 1,              //苹果支付
-    HGPayWayByThird = 2               //第三方支付
-};
-
-typedef NS_ENUM(NSInteger, HGThirdPayType) {
-    HGThirdPayTypeAliPay   = 1,              //支付宝
-    HGThirdPayTypeWeChat   = 2               //第三方支付
-};
 
 @interface HGOrderModel : NSObject
 
@@ -65,9 +56,6 @@ typedef NS_ENUM(NSInteger, HGThirdPayType) {
  *  自定义信息
  */
 @property (nonatomic, strong) NSString *customInfo;
-
-
-
 
 /**
  *  订单信息
