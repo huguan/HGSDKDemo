@@ -12,8 +12,8 @@
 		1415FA9C1DF0213B006C2D41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1415FA9B1DF0213B006C2D41 /* ViewController.m */; };
 		1415FA9F1DF0213B006C2D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1415FA9D1DF0213B006C2D41 /* Main.storyboard */; };
 		1415FAAF1DF02250006C2D41 /* HGSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1415FAAC1DF021DF006C2D41 /* HGSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		143738691DF299F0005C44FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143738681DF299F0005C44FF /* Assets.xcassets */; };
-		14B2CAD81DF27A9E00A31879 /* HGSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B2CAD71DF27A9E00A31879 /* HGSDK.xcassets */; };
+		14F02C931DF65F16001F5D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143738681DF299F0005C44FF /* Assets.xcassets */; };
+		14F02C9E1DF66412001F5D20 /* HGSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F02C9D1DF663FF001F5D20 /* HGSDK.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +41,7 @@
 		1415FAA51DF0213B006C2D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1415FAAC1DF021DF006C2D41 /* HGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HGSDK.framework; sourceTree = "<group>"; };
 		143738681DF299F0005C44FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14B2CAD71DF27A9E00A31879 /* HGSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HGSDK.xcassets; sourceTree = "<group>"; };
+		14F02C9D1DF663FF001F5D20 /* HGSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HGSDK.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 		1415FAAB1DF021DF006C2D41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				14B2CAD71DF27A9E00A31879 /* HGSDK.xcassets */,
+				14F02C9D1DF663FF001F5D20 /* HGSDK.xcassets */,
 				1415FAAC1DF021DF006C2D41 /* HGSDK.framework */,
 			);
 			name = Frameworks;
@@ -165,9 +165,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F02C9E1DF66412001F5D20 /* HGSDK.xcassets in Resources */,
+				14F02C931DF65F16001F5D20 /* Assets.xcassets in Resources */,
 				1415FA9F1DF0213B006C2D41 /* Main.storyboard in Resources */,
-				143738691DF299F0005C44FF /* Assets.xcassets in Resources */,
-				14B2CAD81DF27A9E00A31879 /* HGSDK.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

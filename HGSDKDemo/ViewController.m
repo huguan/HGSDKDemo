@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 
+    
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     UIImageView *bgImageView = [UIImageView new];
     if (UIInterfaceOrientationIsLandscape(orientation))
