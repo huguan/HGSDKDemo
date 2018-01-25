@@ -52,7 +52,13 @@
     [payButton addTarget:self action:@selector(payButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:payButton];
     
-    
+    UIButton *logOutButton = [UIButton new];
+    [logOutButton setFrame:CGRectMake(140, 260, 100, 40)];
+    [logOutButton setTitle:@"注销" forState:UIControlStateNormal];
+    [logOutButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [logOutButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [logOutButton addTarget:self action:@selector(logOutButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:logOutButton];
     
     [[HGSDK sharedHGSDK] setLogoutBlock:^{
         NSLog(@"用户注销了");
@@ -61,35 +67,60 @@
 
 
 #pragma mark --支付按钮事件--
-- (void)payButtonClick
-{
+- (void)payButtonClick {
     HGOrderModel *orderModel = [HGOrderModel new];
     [orderModel setServerId:@"serverId8"];
-    [orderModel setAmount:1];
+    [orderModel setAmount:98];
     [orderModel setRoleId:@"465689"];
     [orderModel setRoleName:@"锐雯"];
     [orderModel setProductName:@"冠军之刃"];
     [orderModel setProductDescription:@"皮肤"];
     [orderModel setOrderId:[self getOrderStringByTime]];
     [orderModel setCustomInfo:@"断剑重铸之日 骑士归来之时"];
-    [orderModel setProductId:@"com.huguan.HGFrameworksSDKDemo.Riven"];
+    [orderModel setProductId:@"com.sg.chenzhan.lydg.zs9800"];
     [[HGSDK sharedHGSDK] payment:orderModel];
 }
 
 
 #pragma mark --登陆按钮事件--
-- (void)loginButtonClick
-{
+- (void)loginButtonClick {
     [[HGSDK sharedHGSDK] hgLogin:^(HGUserModel *userModel) {
         NSString *userId    = userModel.userId;
         NSString *userName  = userModel.userName;
-        NSString *sessionId = userModel.sessionId;
+        NSString *sessionId = userModel.token;
         NSLog(@"userId    -- %@", userId);
         NSLog(@"userName  -- %@", userName);
         NSLog(@"sessionId -- %@", sessionId);
+        
+        // 初始化角色模型
+        HGRole *role = [HGRole new];
+        role.roleName = @"锐雯";
+        role.roleLevel = @"99";
+        role.serverId = @"1";
+        
+        // 模拟创角上报
+        role.eventType = HGRoleEventTypeCreateRole;
+        [[HGSDK sharedHGSDK] hgReportRole:role];
+        
+        // 模拟登录上报
+        role.eventType = HGRoleEventTypeLogin;
+        [[HGSDK sharedHGSDK] hgReportRole:role];
+        
+        // 模拟升级上报
+        role.roleLevel = @"100";
+        role.eventType = HGRoleEventTypeLevelUp;
+        [[HGSDK sharedHGSDK] hgReportRole:role];
+        
+        // 模拟改名上报
+        role.roleName = @"锐萌萌";
+        role.eventType = HGRoleEventTypeChangeName;
+        [[HGSDK sharedHGSDK] hgReportRole:role];
     }];
 }
 
+- (void)logOutButtonClick {
+    [[HGSDK sharedHGSDK] hgLogOut];
+}
 
 - (NSString *)getOrderStringByTime
 {

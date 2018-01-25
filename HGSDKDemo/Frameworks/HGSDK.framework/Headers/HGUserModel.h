@@ -6,7 +6,8 @@
 //  Copyright © 2016年 熙文 张. All rights reserved.
 //
 
-#import <HGSDK/HGSDK.h>
+//#import <HGSDK/HGSDK.h>
+#import <Foundation/Foundation.h>
 
 @interface HGUserModel : NSObject
 
@@ -18,7 +19,7 @@
 /**
  *  会话ID
  */
-@property (nonatomic, strong) NSString *sessionId;
+@property (nonatomic, strong) NSString *token;
 
 /**
  *  用户ID
@@ -26,6 +27,6 @@
 @property (nonatomic, strong) NSString *userId;
 
 
-@property (nonatomic, strong) NSString *mobile;
+@property (nonatomic, strong) NSString *phone;
 
 @end

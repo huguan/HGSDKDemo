@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 @interface HGSDKParameters : NSObject
 
 /**
@@ -19,37 +17,49 @@
  */
 + (HGSDKParameters *)sharedHGSDKParameters;
 
-
-
-
 /**
  *  合作商编号
  */
 @property (nonatomic, strong) NSString *cpId;
 
 /**
- *  游戏编号
+ *  互冠gameID
  */
-@property (nonatomic, strong) NSString *gameId;
+@property (nonatomic, strong) NSString *gameID;
 
 /**
- *  游戏渠道
+ *  互冠payKey
  */
-@property (nonatomic, strong) NSString *channelId;
+@property (nonatomic, strong) NSString *payKey;
 
 /**
- *  游戏密钥
+ *  互冠appKey
  */
-@property (nonatomic, strong) NSString *secretKey;
+@property (nonatomic, strong) NSString *appKey;
 
 /**
- *  微信分享ID
+ *  互冠subID
+ */
+@property (nonatomic, strong) NSString *subID;
+
+/**
+ *  WX分享ID
  */
 @property (nonatomic, strong) NSString *wxAppId;
+/**
+ *  talkingDataAppID
+ */
+@property (nonatomic, strong) NSString *tdAppId;
 
 
+/**
+ *  DataEye AppID
+ */
+@property (nonatomic, strong) NSString *deAppId;
 
-
-
+/**
+ *  TTTracker AppID
+ */
+@property (nonatomic, strong) NSString *ttAppId;
 
 @end

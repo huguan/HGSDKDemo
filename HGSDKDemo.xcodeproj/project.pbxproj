@@ -12,8 +12,20 @@
 		1415FA9C1DF0213B006C2D41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1415FA9B1DF0213B006C2D41 /* ViewController.m */; };
 		1415FA9F1DF0213B006C2D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1415FA9D1DF0213B006C2D41 /* Main.storyboard */; };
 		14F02C931DF65F16001F5D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143738681DF299F0005C44FF /* Assets.xcassets */; };
-		8F0FC7D31EFBE7BF00A44254 /* HGSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0FC7D01EFBE76500A44254 /* HGSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F69E3AE1FFE25C600A6883C /* libDataEyeTracking_v1.9.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F69E3981FFE25C600A6883C /* libDataEyeTracking_v1.9.4.a */; };
+		8F69E3AF1FFE25C600A6883C /* libGDTTrackSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F69E39B1FFE25C600A6883C /* libGDTTrackSDK.a */; };
+		8F69E3B01FFE25C600A6883C /* libTalkingDataAppCpa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F69E39D1FFE25C600A6883C /* libTalkingDataAppCpa.a */; };
+		8F69E3B11FFE25C600A6883C /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F69E3A21FFE25C600A6883C /* FMDatabase.m */; };
+		8F69E3B21FFE25C600A6883C /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F69E3A41FFE25C600A6883C /* FMDatabaseAdditions.m */; };
+		8F69E3B31FFE25C600A6883C /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F69E3A61FFE25C600A6883C /* FMDatabasePool.m */; };
+		8F69E3B41FFE25C600A6883C /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F69E3A81FFE25C600A6883C /* FMDatabaseQueue.m */; };
+		8F69E3B51FFE25C600A6883C /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F69E3AB1FFE25C600A6883C /* FMResultSet.m */; };
+		8F69E3B61FFE25C600A6883C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F69E3AC1FFE25C600A6883C /* Info.plist */; };
+		8F69E3B71FFE25C600A6883C /* TTTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F69E3AD1FFE25C600A6883C /* TTTracker.framework */; };
+		8F69E3B91FFE260100A6883C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F69E3B81FFE260100A6883C /* libsqlite3.tbd */; };
 		8FAE66201EEAB89C00C75A56 /* HGSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FAE661F1EEAB89C00C75A56 /* HGSDK.xcassets */; };
+		8FB1157420197CDF00E5B4E6 /* HGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB1157320197CDF00E5B4E6 /* HGSDK.framework */; };
+		8FB1157520197CE400E5B4E6 /* HGSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB1157320197CDF00E5B4E6 /* HGSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8F0FC7D31EFBE7BF00A44254 /* HGSDK.framework in Embed Frameworks */,
+				8FB1157520197CE400E5B4E6 /* HGSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,8 +52,28 @@
 		1415FA9E1DF0213B006C2D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1415FAA51DF0213B006C2D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		143738681DF299F0005C44FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F0FC7D01EFBE76500A44254 /* HGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HGSDK.framework; sourceTree = "<group>"; };
+		8F69E3971FFE25C600A6883C /* DCTrackingAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTrackingAgent.h; sourceTree = "<group>"; };
+		8F69E3981FFE25C600A6883C /* libDataEyeTracking_v1.9.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDataEyeTracking_v1.9.4.a; sourceTree = "<group>"; };
+		8F69E39A1FFE25C600A6883C /* GDTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTTrack.h; sourceTree = "<group>"; };
+		8F69E39B1FFE25C600A6883C /* libGDTTrackSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTTrackSDK.a; sourceTree = "<group>"; };
+		8F69E39D1FFE25C600A6883C /* libTalkingDataAppCpa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingDataAppCpa.a; sourceTree = "<group>"; };
+		8F69E39E1FFE25C600A6883C /* TalkingDataAppCpa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingDataAppCpa.h; sourceTree = "<group>"; };
+		8F69E3A11FFE25C600A6883C /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		8F69E3A21FFE25C600A6883C /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		8F69E3A31FFE25C600A6883C /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		8F69E3A41FFE25C600A6883C /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		8F69E3A51FFE25C600A6883C /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		8F69E3A61FFE25C600A6883C /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		8F69E3A71FFE25C600A6883C /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		8F69E3A81FFE25C600A6883C /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		8F69E3A91FFE25C600A6883C /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		8F69E3AA1FFE25C600A6883C /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		8F69E3AB1FFE25C600A6883C /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		8F69E3AC1FFE25C600A6883C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F69E3AD1FFE25C600A6883C /* TTTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTTracker.framework; sourceTree = "<group>"; };
+		8F69E3B81FFE260100A6883C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8FAE661F1EEAB89C00C75A56 /* HGSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HGSDK.xcassets; sourceTree = "<group>"; };
+		8FB1157320197CDF00E5B4E6 /* HGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HGSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +81,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB1157420197CDF00E5B4E6 /* HGSDK.framework in Frameworks */,
+				8F69E3B91FFE260100A6883C /* libsqlite3.tbd in Frameworks */,
+				8F69E3AF1FFE25C600A6883C /* libGDTTrackSDK.a in Frameworks */,
+				8F69E3B01FFE25C600A6883C /* libTalkingDataAppCpa.a in Frameworks */,
+				8F69E3AE1FFE25C600A6883C /* libDataEyeTracking_v1.9.4.a in Frameworks */,
+				8F69E3B71FFE25C600A6883C /* TTTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +136,79 @@
 		1415FAAB1DF021DF006C2D41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F69E3B81FFE260100A6883C /* libsqlite3.tbd */,
+				8F69E3951FFE25C600A6883C /* DataSDK */,
 				8FAE661F1EEAB89C00C75A56 /* HGSDK.xcassets */,
-				8F0FC7D01EFBE76500A44254 /* HGSDK.framework */,
+				8FB1157320197CDF00E5B4E6 /* HGSDK.framework */,
 			);
 			name = Frameworks;
 			path = HGSDKDemo/Frameworks;
+			sourceTree = "<group>";
+		};
+		8F69E3951FFE25C600A6883C /* DataSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8F69E3961FFE25C600A6883C /* DataEyeTracking */,
+				8F69E3991FFE25C600A6883C /* GDTSDK */,
+				8F69E39C1FFE25C600A6883C /* TalkingData */,
+				8F69E39F1FFE25C600A6883C /* TTTracker */,
+			);
+			path = DataSDK;
+			sourceTree = "<group>";
+		};
+		8F69E3961FFE25C600A6883C /* DataEyeTracking */ = {
+			isa = PBXGroup;
+			children = (
+				8F69E3971FFE25C600A6883C /* DCTrackingAgent.h */,
+				8F69E3981FFE25C600A6883C /* libDataEyeTracking_v1.9.4.a */,
+			);
+			path = DataEyeTracking;
+			sourceTree = "<group>";
+		};
+		8F69E3991FFE25C600A6883C /* GDTSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8F69E39A1FFE25C600A6883C /* GDTTrack.h */,
+				8F69E39B1FFE25C600A6883C /* libGDTTrackSDK.a */,
+			);
+			path = GDTSDK;
+			sourceTree = "<group>";
+		};
+		8F69E39C1FFE25C600A6883C /* TalkingData */ = {
+			isa = PBXGroup;
+			children = (
+				8F69E39D1FFE25C600A6883C /* libTalkingDataAppCpa.a */,
+				8F69E39E1FFE25C600A6883C /* TalkingDataAppCpa.h */,
+			);
+			path = TalkingData;
+			sourceTree = "<group>";
+		};
+		8F69E39F1FFE25C600A6883C /* TTTracker */ = {
+			isa = PBXGroup;
+			children = (
+				8F69E3A01FFE25C600A6883C /* fmdb */,
+				8F69E3AD1FFE25C600A6883C /* TTTracker.framework */,
+			);
+			path = TTTracker;
+			sourceTree = "<group>";
+		};
+		8F69E3A01FFE25C600A6883C /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				8F69E3A11FFE25C600A6883C /* FMDatabase.h */,
+				8F69E3A21FFE25C600A6883C /* FMDatabase.m */,
+				8F69E3A31FFE25C600A6883C /* FMDatabaseAdditions.h */,
+				8F69E3A41FFE25C600A6883C /* FMDatabaseAdditions.m */,
+				8F69E3A51FFE25C600A6883C /* FMDatabasePool.h */,
+				8F69E3A61FFE25C600A6883C /* FMDatabasePool.m */,
+				8F69E3A71FFE25C600A6883C /* FMDatabaseQueue.h */,
+				8F69E3A81FFE25C600A6883C /* FMDatabaseQueue.m */,
+				8F69E3A91FFE25C600A6883C /* FMDB.h */,
+				8F69E3AA1FFE25C600A6883C /* FMResultSet.h */,
+				8F69E3AB1FFE25C600A6883C /* FMResultSet.m */,
+				8F69E3AC1FFE25C600A6883C /* Info.plist */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +219,9 @@
 			buildConfigurationList = 1415FAA81DF0213B006C2D41 /* Build configuration list for PBXNativeTarget "HGSDKDemo" */;
 			buildPhases = (
 				1415FA8D1DF0213B006C2D41 /* Sources */,
+				149E45E71E0BE7AD008011DF /* Embed Frameworks */,
 				1415FA8E1DF0213B006C2D41 /* Frameworks */,
 				1415FA8F1DF0213B006C2D41 /* Resources */,
-				149E45E71E0BE7AD008011DF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,8 +243,8 @@
 				TargetAttributes = {
 					1415FA901DF0213B006C2D41 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4C6XY7CYX2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = W8SVLP432B;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -165,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F69E3B61FFE25C600A6883C /* Info.plist in Resources */,
 				14F02C931DF65F16001F5D20 /* Assets.xcassets in Resources */,
 				1415FA9F1DF0213B006C2D41 /* Main.storyboard in Resources */,
 				8FAE66201EEAB89C00C75A56 /* HGSDK.xcassets in Resources */,
@@ -179,8 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1415FA9C1DF0213B006C2D41 /* ViewController.m in Sources */,
+				8F69E3B31FFE25C600A6883C /* FMDatabasePool.m in Sources */,
 				1415FA991DF0213B006C2D41 /* AppDelegate.mm in Sources */,
+				8F69E3B41FFE25C600A6883C /* FMDatabaseQueue.m in Sources */,
 				1415FA961DF0213B006C2D41 /* main.m in Sources */,
+				8F69E3B11FFE25C600A6883C /* FMDatabase.m in Sources */,
+				8F69E3B51FFE25C600A6883C /* FMResultSet.m in Sources */,
+				8F69E3B21FFE25C600A6883C /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,20 +405,27 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: wu zhaoguang (6KCG54S749)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4C6XY7CYX2;
+				DEVELOPMENT_TEAM = W8SVLP432B;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HGSDKDemo/Frameworks",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/TTTracker",
 				);
 				INFOPLIST_FILE = HGSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/DataEyeTracking",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/GDTSDK",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/TalkingData",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huguan.HGSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.chenzhan.lydg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "0292e72a-6a58-4968-bb35-843105ae7939";
+				PROVISIONING_PROFILE_SPECIFIER = chenzhan_lydg_dev;
 			};
 			name = Debug;
 		};
@@ -317,20 +436,27 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: wu zhaoguang (6KCG54S749)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4C6XY7CYX2;
+				DEVELOPMENT_TEAM = W8SVLP432B;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HGSDKDemo/Frameworks",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/TTTracker",
 				);
 				INFOPLIST_FILE = HGSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/DataEyeTracking",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/GDTSDK",
+					"$(PROJECT_DIR)/HGSDKDemo/Frameworks/DataSDK/TalkingData",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huguan.HGSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.chenzhan.lydg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "0292e72a-6a58-4968-bb35-843105ae7939";
+				PROVISIONING_PROFILE_SPECIFIER = chenzhan_lydg_dev;
 			};
 			name = Release;
 		};

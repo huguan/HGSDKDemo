@@ -15,31 +15,34 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [[HGSDKParameters sharedHGSDKParameters] setGameId:@"97"];
-    [[HGSDKParameters sharedHGSDKParameters] setSecretKey:@"91b4416a5f93f6ad596b4e71b76ff07f"];
-    [[HGSDKParameters sharedHGSDKParameters] setChannelId:@"0"];
-    [[HGSDKParameters sharedHGSDKParameters] setCpId:@"4"];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 设置初始化参数
+    [[HGSDKParameters sharedHGSDKParameters] setGameID:@"8"];
+    [[HGSDKParameters sharedHGSDKParameters] setPayKey:@"bb4a3c615e02ffe2caef444177e9b87f"];
+    [[HGSDKParameters sharedHGSDKParameters] setAppKey:@""];
+    [[HGSDKParameters sharedHGSDKParameters] setSubID:@"0"];
+    [[HGSDKParameters sharedHGSDKParameters] setCpId:@"51"];
+
+    [[HGSDKParameters sharedHGSDKParameters] setTdAppId:@"8B2853CEA992413AB5BFE96DEF372B16"];
     [[HGSDKParameters sharedHGSDKParameters] setWxAppId:@"wx799c5867ea4dddd3"];
+    [[HGSDKParameters sharedHGSDKParameters] setTtAppId:@"10036"];
+    [[HGSDKParameters sharedHGSDKParameters] setDeAppId:@"CAF2DA765A79D0A2794BD842457DB1648"];
     [[HGSDK sharedHGSDK] hgInitWithSDKParameters:[HGSDKParameters sharedHGSDKParameters]];
     return YES;
 }
 
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    if ([sourceApplication isEqualToString:@"com.tencent.xin"])
-    {
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([sourceApplication isEqualToString:@"com.tencent.xin"]) {
         return [[HGSDK sharedHGSDK] handleOpenURL:url];
     }
     return YES;
 }
 
-- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
-{
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     return [[HGSDK sharedHGSDK] supportedInterface];
 }
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

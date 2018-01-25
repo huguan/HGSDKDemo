@@ -11,6 +11,7 @@
 #import "HGSDKParameters.h"
 #import "HGOrderModel.h"
 #import "HGUserModel.h"
+#import "HGRole.h"
 
 
 //! Project version number for HGSDK.
@@ -23,8 +24,8 @@ FOUNDATION_EXPORT const unsigned char HGSDKVersionString[];
 
 
 typedef enum {
-    HGUserNotLogin                     = 10
-}HGSDKErrorFailed;
+    HGUserNotLogin = 10
+} HGSDKErrorFailed;
 
 @class HGSDKParameters;
 @class HGUserModel;
@@ -44,10 +45,14 @@ typedef void (^logoutBlock)();
 + (HGSDK *)sharedHGSDK;
 
 
-@property (nonatomic, strong) NSString *currentSessionId;
+@property (nonatomic, strong) NSString *currentToken;
 @property (nonatomic, strong) NSString *currentUserName;
-@property (nonatomic, strong) NSString *currentUserMobile;
 @property (nonatomic, strong) NSString *currentUserId;
+@property (nonatomic, strong) NSString *currentChannelId;
+@property (nonatomic, strong) NSString *currentUserPhone;
+@property (nonatomic, strong) NSString *currentVM;
+
+
 @property (nonatomic, strong) NSString *currentService;
 
 @property (nonatomic, copy, readonly) loginSuccessBlock loginSuccessBlock;
@@ -78,9 +83,16 @@ typedef void (^logoutBlock)();
  */
 - (void)hgLogin:(loginSuccessBlock)successBlock;
 
+/**
+ *  角色信息上报，在登录或角色信息发生变化时后进行上报（例如创角、登录、升级、改名）
+ *  注意：需按照角色模型里面的eventType属性，对相应的事件进行逐个上报
+ *
+ *  @param role 角色模型
+ */
+- (void)hgReportRole:(HGRole *)role;
 
 /**
- *  支付
+ *  
  *
  *  @param orderInfo    订单信息
  */
@@ -91,15 +103,21 @@ typedef void (^logoutBlock)();
  */
 - (void)hgLogOut;
 
-
 /**
- *  第三方应用跳转
+ *  tp应用跳转
  *
  *  @param url url
  *
  *  @return
  */
 - (BOOL)handleOpenURL:(NSURL *)url;
+
++ (void)showFloatWindow;
+
++ (void)hiddenFloatWindow;
+
+// 获取SDK版本
++ (NSString *)sdkVersion;
 
 @end
 
